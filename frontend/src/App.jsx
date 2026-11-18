@@ -2,26 +2,14 @@
 import './App.css';
 import hero from './assets/hero.png';
 
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
 function App() {
   return (
     <div className="website">
 
-      {/* Navigation Bar */}
-      <nav className="navbar">
-        <div className="logo">STELLAR<span> SOLES.</span></div>
-
-        <div className="nav-links">
-          <a href="#home">Home</a>
-          <a href="#collection">Shop</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
-
-        <div className="nav-icons">
-          <a href="#account">Account</a>
-          <a href="#cart">Cart (0)</a>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="hero" id="home">
@@ -59,6 +47,7 @@ function App() {
         </p>
 
         <div className="product-grid">
+
           <div className="product-card">
             <div className="product-placeholder">01</div>
             <h3>Classic Sneakers</h3>
@@ -76,6 +65,7 @@ function App() {
             <h3>Everyday Comfort</h3>
             <p>₹2,799</p>
           </div>
+
         </div>
       </section>
 
@@ -83,6 +73,7 @@ function App() {
       <section className="about" id="about">
         <p className="subtitle">OUR PHILOSOPHY</p>
         <h2>MADE FOR EVERY STEP.</h2>
+
         <p>
           At Stellar Soles, we believe great footwear
           should look good and feel even better.
@@ -90,12 +81,7 @@ function App() {
         </p>
       </section>
 
-      {/* Footer */}
-      <footer id="contact">
-        <h2>STELLAR SOLES.</h2>
-        <p>Step into your style.</p>
-        <p>© 2026 Stellar Soles. All rights reserved.</p>
-      </footer>
+      <Footer />
 
     </div>
   );
