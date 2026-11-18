@@ -209,3 +209,45 @@ footer p {
     height: 300px;
   }
 }
+
+
+
+/* Product Cards */
+
+.product-image {
+  width: 100%;
+  height: 260px;
+  background: #f1eee8;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-category {
+  color: #987c57;
+  font-size: 12px;
+  margin-top: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-price {
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.product-button {
+  padding: 10px 20px;
+  border: 1px solid #171717;
+  background: white;
+  color: #171717;
+}
+
+.product-button:hover {
+  background: #171717;
+  color: white;
+}

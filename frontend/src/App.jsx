@@ -4,6 +4,7 @@ import hero from './assets/hero.png';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ProductCard from './components/ProductCard';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
 
       {/* Hero Section */}
       <section className="hero" id="home">
+
         <div className="hero-content">
           <p className="subtitle">NEW COLLECTION 2026</p>
 
@@ -35,11 +37,14 @@ function App() {
         <div className="hero-image">
           <img src={hero} alt="Stellar Soles shoe collection" />
         </div>
+
       </section>
 
       {/* Featured Collection */}
       <section className="collection" id="collection">
+
         <p className="subtitle">CURATED FOR YOU</p>
+
         <h2>FEATURED COLLECTION</h2>
 
         <p className="section-description">
@@ -48,30 +53,36 @@ function App() {
 
         <div className="product-grid">
 
-          <div className="product-card">
-            <div className="product-placeholder">01</div>
-            <h3>Classic Sneakers</h3>
-            <p>₹2,499</p>
-          </div>
+          <ProductCard
+            name="Classic Sneakers"
+            price="2499"
+            category="Casual"
+            image={hero}
+          />
 
-          <div className="product-card">
-            <div className="product-placeholder">02</div>
-            <h3>Urban Runners</h3>
-            <p>₹3,299</p>
-          </div>
+          <ProductCard
+            name="Urban Runners"
+            price="3299"
+            category="Sports"
+            image={hero}
+          />
 
-          <div className="product-card">
-            <div className="product-placeholder">03</div>
-            <h3>Everyday Comfort</h3>
-            <p>₹2,799</p>
-          </div>
+          <ProductCard
+            name="Everyday Comfort"
+            price="2799"
+            category="Lifestyle"
+            image={hero}
+          />
 
         </div>
+
       </section>
 
       {/* About Section */}
       <section className="about" id="about">
+
         <p className="subtitle">OUR PHILOSOPHY</p>
+
         <h2>MADE FOR EVERY STEP.</h2>
 
         <p>
@@ -79,6 +90,7 @@ function App() {
           should look good and feel even better.
           Find your style and make every step count.
         </p>
+
       </section>
 
       <Footer />
