@@ -1,122 +1,104 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+
+import './App.css';
+import hero from './assets/hero.png';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className="website">
+
+      {/* Navigation Bar */}
+      <nav className="navbar">
+        <div className="logo">STELLAR<span> SOLES.</span></div>
+
+        <div className="nav-links">
+          <a href="#home">Home</a>
+          <a href="#collection">Shop</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+
+        <div className="nav-icons">
+          <a href="#account">Account</a>
+          <a href="#cart">Cart (0)</a>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="hero" id="home">
+        <div className="hero-content">
+          <p className="subtitle">NEW COLLECTION 2026</p>
+
+          <h1>
+            FIND YOUR
+            <br />
+            PERFECT STEP.
+          </h1>
+
+          <p className="hero-description">
+            Discover footwear that combines comfort,
+            quality and timeless style.
           </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+          <a href="#collection" className="shop-button">
+            SHOP NOW →
+          </a>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+
+        <div className="hero-image">
+          <img src={hero} alt="Stellar Soles shoe collection" />
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      {/* Featured Collection */}
+      <section className="collection" id="collection">
+        <p className="subtitle">CURATED FOR YOU</p>
+        <h2>FEATURED COLLECTION</h2>
+
+        <p className="section-description">
+          Step into something extraordinary.
+        </p>
+
+        <div className="product-grid">
+          <div className="product-card">
+            <div className="product-placeholder">01</div>
+            <h3>Classic Sneakers</h3>
+            <p>₹2,499</p>
+          </div>
+
+          <div className="product-card">
+            <div className="product-placeholder">02</div>
+            <h3>Urban Runners</h3>
+            <p>₹3,299</p>
+          </div>
+
+          <div className="product-card">
+            <div className="product-placeholder">03</div>
+            <h3>Everyday Comfort</h3>
+            <p>₹2,799</p>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="about" id="about">
+        <p className="subtitle">OUR PHILOSOPHY</p>
+        <h2>MADE FOR EVERY STEP.</h2>
+        <p>
+          At Stellar Soles, we believe great footwear
+          should look good and feel even better.
+          Find your style and make every step count.
+        </p>
+      </section>
+
+      {/* Footer */}
+      <footer id="contact">
+        <h2>STELLAR SOLES.</h2>
+        <p>Step into your style.</p>
+        <p>© 2026 Stellar Soles. All rights reserved.</p>
+      </footer>
+
+    </div>
+  );
 }
 
-export default App
+export default App;
